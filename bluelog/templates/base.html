@@ -1,7 +1,6 @@
 {% from 'bootstrap/nav.html' import render_nav_item %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {% block head %}
         <meta charset="utf-8">
@@ -28,9 +27,6 @@
                     {{ render_nav_item('blog.index', 'Home') }}
                     {{ render_nav_item('blog.about', 'About') }}
                 </ul>
-                <audio controls>
-                    <source src="../static/beautiful.mp3" type="audio/mpeg">
-                </audio>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_authenticated %}
                         <li class="nav-item dropdown">
@@ -75,6 +71,9 @@
 {% endblock nav %}
 
 <main class="container">
+    <div class="audioplayer">
+        {% include "_audio.html"%}
+    </div>
     {% for message in get_flashed_messages(with_categories=True) %}
         <div class="alert alert-{{ message[0] }}" role="alert">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
