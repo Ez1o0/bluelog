@@ -72,7 +72,10 @@
 
 <main class="container">
     <div class="audioplayer">
-        {% include "_audio.html"%}
+        <audio id="audioplayer" controls autobuffer=""  preload="auto">
+            <source src="{{ url_for('static', filename='beautiful.mp3') }}" type="audio/mpeg">
+        </audio>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/audio.js') }}"></script>
     </div>
     {% for message in get_flashed_messages(with_categories=True) %}
         <div class="alert alert-{{ message[0] }}" role="alert">

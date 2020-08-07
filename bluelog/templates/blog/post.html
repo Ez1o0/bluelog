@@ -29,6 +29,11 @@
         <div class="col-sm-8">
             {{ post.body|safe }}
             <hr>
+
+            {{ ckeditor.load_code_theme() }}
+            <script type="text/javascript" src="{{ url_for('static', filename='ckeditor/ckeditor.js') }}"></script>
+            {{ ckeditor.config(name='body') }}
+
             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".postLinkModal">Share
             </button>
             <div class="modal fade postLinkModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"

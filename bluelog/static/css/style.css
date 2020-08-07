@@ -1,3 +1,14 @@
+.marker{
+    background-color: skyblue;
+}
+
+blockquote
+{
+	padding-left: 20px;
+    padding-right: 8px;
+    border-left: solid black;
+    border-left-width: 5px;
+}
 nav {
     margin-bottom: 20px;
 }
