@@ -38,23 +38,32 @@ function clearCookie(name) {
 var song = document.getElementsByTagName('audio')[0];
 var played = false;
 var tillPlayed = getCookie('timePlayed');
+// 获取音乐是否播放
+song.onpause=function(){
+    setCookie('ispaused', true);
+}
+song.onplaying=function(){
+    setCookie('ispaused', false);
+}
+var ispaused = getCookie('ispaused');
+
 function update()
 {
     if(!played){
         if(tillPlayed){
         song.currentTime = tillPlayed;
-        song.play();
+        if(ispaused=='false'){song.play()}
         played = true;
         }
         else {
-                song.play();
-                played = true;
+        played = true;
         }
     }
-
     else {
-    setCookie('timePlayed', song.currentTime);       
+        setCookie('timePlayed', song.currentTime);   
     }
 }
 setInterval(update,1000); 
+
+
 
