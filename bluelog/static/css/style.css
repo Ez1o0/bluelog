@@ -4,10 +4,14 @@
 
 blockquote
 {
-	padding-left: 20px;
-    padding-right: 8px;
-    border-left: solid black;
+    font-style: italic; 
+    font-weight: lighter;
+    padding: 20px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    border-left: solid #ccc;
     border-left-width: 5px;
+    margin-left: 20px;
 }
 nav {
     margin-bottom: 20px;
