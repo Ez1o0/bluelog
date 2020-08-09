@@ -9,9 +9,10 @@ blockquote
     padding: 20px;
     padding-left: 40px;
     padding-bottom: 10px;
-    border-left: solid #ccc;
+    border-left: solid #999;
     border-left-width: 5px;
     margin-left: 20px;
+    background-color: gainsboro;
 }
 nav {
     margin-bottom: 20px;
