@@ -30,9 +30,7 @@
             {{ post.body|safe }}
             <hr>
 
-            {{ ckeditor.load_code_theme() }}
-            <script type="text/javascript" src="{{ url_for('static', filename='ckeditor/ckeditor.js') }}"></script>
-            {{ ckeditor.config(name='body') }}
+
 
             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".postLinkModal">Share
             </button>
@@ -142,4 +140,7 @@
             {% include "blog/_sidebar.html" %}
         </div>
     </div>
+            {{ ckeditor.load_code_theme() }}
+            <script type="text/javascript" src="{{ url_for('static', filename='ckeditor/ckeditor.js') }}"></script>
+            {{ ckeditor.config(name='body') }}
 {% endblock %}
