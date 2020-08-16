@@ -29,9 +29,6 @@
         <div class="col-sm-8">
             {{ post.body|safe }}
             <hr>
-
-
-
             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".postLinkModal">Share
             </button>
             <div class="modal fade postLinkModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
@@ -97,7 +94,7 @@
                                         <br>{{ comment.replied.body }}
                                     </p>
                                 {%- endif -%}
-                                <p class="mb-1">{{ comment.body }}</p>
+                                <p class="mb-1">{{ comment.body |safe }}</p>
                                 <div class="float-right">
                                     <a class="btn btn-light btn-sm"
                                        href="{{ url_for('.reply_comment', comment_id=comment.id) }}">Reply</a>
